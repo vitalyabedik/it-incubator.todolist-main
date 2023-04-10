@@ -1,5 +1,5 @@
 import React from 'react';
-import {filterKeyType} from './App';
+import {filterKeyType} from './AppComponent';
 
 type TaskType = {
     id: number
@@ -14,7 +14,7 @@ type PropsType = {
     // ! tasksFilter: (filterKey: filterKeyType) => void
 }
 
-export function Todolist(props: PropsType) {
+export function Todolist2(props: PropsType) {
     let [globalFilterKey, setGlobalFilterKey] = React.useState('All')
 
     const tasksFilter = (filterKey: filterKeyType) => {
