@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import {Lesson2} from './Todolist2/AppComponent';
+import {Lesson3} from './Todolist3/Lesson3';
+
 
 function App() {
 
     return (
         <div className="App">
-            <Lesson2/>
+            <Lesson3/>
         </div>
     );
 }

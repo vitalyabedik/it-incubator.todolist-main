@@ -1,5 +1,5 @@
 import React from 'react';
-import {filterKeyType} from './AppComponent';
+import {filterKeyType} from './Lesson2';
 
 type TaskType = {
     id: number
