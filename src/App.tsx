@@ -1,13 +1,14 @@
 import React from 'react';
+
 import './App.css';
 
-import {Lesson6} from './Tuesday/Todolist6/Lesson6';
+import {Lesson7} from './Tuesday/Todolist7/Lesson7';
 
 function App() {
 
     return (
         <div>
-            <Lesson6/>
+            <Lesson7/>
         </div>
     );
 }
