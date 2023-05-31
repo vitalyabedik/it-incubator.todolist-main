@@ -1,7 +1,7 @@
 import {
     TasksStateType,
     TodolistType
-} from '../../../../../../../Загрузки/it-incubator-todolist-ts-10/it-incubator-todolist-ts-10/src/App';
+} from '../Lesson10';
 import {addTodolistAC, todolistsReducer} from './todolists-reducer';
 import {tasksReducer} from './tasks-reducer';
 
