@@ -1,5 +1,5 @@
 import React, {useReducer, useState} from 'react';
-import './App.css';
+import './Lesson11.css';
 import {TaskType, Todolist} from './Todolist';
 import {v1} from 'uuid';
 import {AddItemForm} from './AddItemForm';
@@ -12,10 +12,10 @@ import {
     todolistsReducer
 } from './state/todolists-reducer';
 import {addTaskAC, changeTaskStatusAC, changeTaskTitleAC, removeTaskAC, tasksReducer} from './state/tasks-reducer';
-import {AppBar, Button, Container, Grid, IconButton, Paper, Toolbar, Typography} from "@mui/material";
-import {Menu} from "@mui/icons-material";
+import {AppBar, Button, Container, Grid, IconButton, Paper, Toolbar, Typography} from '@mui/material';
+import {Menu} from '@mui/icons-material';
 
-export type FilterValuesType = "all" | "active" | "completed";
+export type FilterValuesType = 'all' | 'active' | 'completed';
 export type TodolistType = {
     id: string
     title: string
@@ -32,18 +32,18 @@ function AppWithReducers() {
     let todolistId2 = v1();
 
     let [todolists, dispatchToTodolists] = useReducer(todolistsReducer, [
-        {id: todolistId1, title: "What to learn", filter: "all"},
-        {id: todolistId2, title: "What to buy", filter: "all"}
+        {id: todolistId1, title: 'What to learn', filter: 'all'},
+        {id: todolistId2, title: 'What to buy', filter: 'all'}
     ])
 
     let [tasks, dispatchToTasks] = useReducer(tasksReducer, {
         [todolistId1]: [
-            {id: v1(), title: "HTML&CSS", isDone: true},
-            {id: v1(), title: "JS", isDone: true}
+            {id: v1(), title: 'HTML&CSS', isDone: true},
+            {id: v1(), title: 'JS', isDone: true}
         ],
         [todolistId2]: [
-            {id: v1(), title: "Milk", isDone: true},
-            {id: v1(), title: "React Book", isDone: true}
+            {id: v1(), title: 'Milk', isDone: true},
+            {id: v1(), title: 'React Book', isDone: true}
         ]
     });
 
@@ -103,7 +103,7 @@ function AppWithReducers() {
                 </Toolbar>
             </AppBar>
             <Container fixed>
-                <Grid container style={{padding: "20px"}}>
+                <Grid container style={{padding: '20px'}}>
                     <AddItemForm addItem={addTodolist}/>
                 </Grid>
                 <Grid container spacing={3}>
@@ -112,15 +112,15 @@ function AppWithReducers() {
                             let allTodolistTasks = tasks[tl.id];
                             let tasksForTodolist = allTodolistTasks;
 
-                            if (tl.filter === "active") {
+                            if (tl.filter === 'active') {
                                 tasksForTodolist = allTodolistTasks.filter(t => t.isDone === false);
                             }
-                            if (tl.filter === "completed") {
+                            if (tl.filter === 'completed') {
                                 tasksForTodolist = allTodolistTasks.filter(t => t.isDone === true);
                             }
 
                             return <Grid key={tl.id} item>
-                                <Paper style={{padding: "10px"}}>
+                                <Paper style={{padding: '10px'}}>
                                     <Todolist
                                         key={tl.id}
                                         id={tl.id}
