@@ -3,9 +3,9 @@ import {Provider} from 'react-redux';
 
 import './App.css';
 
-import {store} from './Wednesday/Todolist10/state/store';
-import {Lesson11} from './Wednesday/Todolist11/Lesson11';
-import AppWithRedux from './Wednesday/Todolist11/AppWithRedux';
+import {store} from './Wednesday/Todolist12/state/store';
+
+import AppWithRedux from './Wednesday/Todolist12/AppWithRedux';
 
 function App() {
 
@@ -13,7 +13,6 @@ function App() {
         <div>
             <Provider store={store}>
                 <AppWithRedux/>
-                {/*<Lesson11/>*/}
             </Provider>
         </div>
     );

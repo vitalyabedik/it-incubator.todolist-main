@@ -2,9 +2,10 @@ import {
     FilterValuesType,
     TasksStateType,
     TodolistType
-} from '../../../../../../../Загрузки/it-incubator-todolist-ts-10/it-incubator-todolist-ts-10/src/App';
+} from '../Lesson10';
 import {v1} from 'uuid';
 import {AddTodolistActionType, RemoveTodolistActionType} from './todolists-reducer';
+import {TaskType} from '../Todolist';
 
 export type RemoveTaskActionType = {
     type: 'REMOVE-TASK'
